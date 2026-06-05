@@ -1,0 +1,31 @@
+# colcon build artifacts
+build/
+install/
+log/
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# rosbag2
+*.db3
+*.mcap
+*.bag
+
+# Misc
+*.csv
+*.png
+!docs/**/*.png

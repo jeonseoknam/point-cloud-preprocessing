@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>pointcloud_ground_filter_cpp</name>
+  <version>0.0.0</version>
+  <description>
+    Per-scan RANSAC ground-plane segmentation for LiDAR clouds feeding
+    NDT scan matching. C++ implementation using PCL — replacement for
+    the earlier Python prototype, which spent most of its time in
+    sensor_msgs_py.point_cloud2 conversion (~500ms/100k-point scan)
+    and caused system-wide real-time backlog. PCL pcl::fromROSMsg +
+    SACSegmentation typically completes in a few ms per scan.
+  </description>
+
+  <maintainer email="j20nsuknam@gmail.com">jeonseoknam</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>pcl_conversions</depend>
+  <depend>libpcl-all-dev</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
